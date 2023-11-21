@@ -1,0 +1,577 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container-fluid{
+    background-color: #C89FE0;
+}
+.navbar{
+    background-color: #E5C6E5;
+    padding: 0;
+}
+.navbar-collapse{
+    padding: 20px ;
+}
+.navbar-brand{
+    font-weight: 600;
+    font-family: greatvibes;
+    font-size: 30px;
+    padding: 20px;
+}
+.btn-outline-success{
+    border: 1px solid white;
+    color: white;
+}
+.btn-outline-success:hover{
+    background-color: #B576AF;
+    color: white;
+}
+#Home{
+    width: 100%;
+    height: 1200px;
+    background-color: #E5C6E5;
+    padding: 0 50px;
+}
+.top{
+    padding: 50px 0 30px 0;
+    position: relative;
+}
+.toptext{
+    margin-top: -250px;
+}
+.toptext>h1{
+    font-size: 70px;
+    text-align: center;
+    font-weight: 500;
+    color: #C89FE0;
+    position: relative;
+    opacity: 0;
+    animation-name: h1Animation;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+.toptext>p{
+    font-family: greatvibes;
+    font-size: 150px;
+    text-align: center;
+    position: relative;
+    animation-name: pAnimation;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    color: white;
+}
+.sparkle{
+    width: 300px;
+    height: 300px;
+    background-image: url(./img/Daco_4165835.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-name: sparkleAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.carousel-container{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    box-shadow: 2px 4px 6px 4px #B576AF;
+}
+.slick-track{
+    display: flex;
+}
+.slick-list{
+    overflow: hidden;
+}
+.carousel{
+    width: 30%;
+    height: 500px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.carousel1{
+    background-image: url(./img/taro-milk-tea-featured-image-1-1.jpg);
+}
+.carousel2{
+    background-image: url(./img/img2.jpg);
+}
+.carousel3{
+    background-image: url(./img/images\ \(3\).jpg);
+}
+.carousel4{
+    background-image: url(./img/752476453849f9ad7e796f138a663125.jpg);
+}
+.carousel5{
+    background-image: url(./img/healthy-breakfast-meal-with-yogurt.jpg);
+}
+.carousel6{
+    background-image: url(./img/images.jpg);
+}
+.carousel7{
+    background-image: url(./img/images\ \(1\).jpg);
+}
+.carousel8{
+    background-image: url(./img/img1.jpg);
+}
+.carousel9{
+    background-image: url(./img/images\ \(2\).jpg);
+}
+.carousel-container>.slick-prev,
+.carousel-container>.slick-next{
+    background-color: #B576AF;
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+    box-shadow: 1px 3px 5px 3px #B576AF;
+    position: absolute;
+    cursor: pointer;
+    top: 580px;
+}
+.carousel-container>.slick-prev{
+    left: 40%;
+}
+.carousel-container>.slick-next{
+    left: 55%;
+    width: 90px;
+}
+#About{
+    width: 100%;
+    height: auto;
+    background-image: url(./img/blank-paper-with-gift-box-flower-branch.jpg);
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: 100%;
+    padding: 50px;
+}
+#About>h1{
+    width: 100%;
+    text-align: center;
+    font-size: 90px;
+    font-weight: 100;
+    font-family: greatvibes;
+    color: white;
+}
+.aboutslider{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: 0 80px;
+    background-color: rgb(238, 228, 247);
+    box-shadow: 1px 3px 5px 3px #B576AF;
+    margin-top: 50px;
+}
+.aboutitem{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+}
+.aboutpic1{
+    width: 30%;
+    height: 400px;
+    background-color: #B576AF;
+}
+.aboutpic2,
+.aboutpic22,
+.aboutpic23{
+    width: 32%;
+    height: 340px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 70px;
+    left: 80px;
+}
+.aboutpic2{
+    background-image: url(./img/0d59837e5ed10dddae084ffaab8ef93c.jpg);
+}
+.aboutpic22{
+    background-image: url(./img/taro-bubble-tea-featured.jpg);
+}
+.aboutpic23{
+    background-image: url(./img/images\ \(5\).jpg);
+}
+.aboutitem>p{
+    width: 50%;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #B576AF;
+}
+.aboutslider>.slick-prev,
+.aboutslider>.slick-next{
+    padding: 30px;
+    position: absolute;
+    top: 45%;
+    background-color: #B576AF;
+    box-shadow: 5px 3px 5px 3px white;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center center;
+    border: none;
+    border-radius: 50%;
+    font-size: 0px;
+    z-index: 5;
+}
+.endpic{
+    width: 100%;
+    height: 1000px;
+    background-image: url(./img/—Pngtree—bottom\ shadow\ purple\ gradient\ overlay_7261011.png);
+    background-position: bottom;
+}
+.aboutslider>.slick-prev{
+    left: -30px;
+    background-image: url(./img/загрузка.svg);
+}
+.aboutslider>.slick-next{
+    right: -30px;
+    background-image: url(./img/загрузка\ \(1\).svg);
+}
+#products-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0 70px 0;
+    background-image: url(./img/blank-paper-with-gift-box-flower-branch.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: bottom center;
+}
+.products-card{
+    width: 25%;
+    height: 450px;
+    background-color: #e0b9dc;
+    text-align: center;
+    margin: 30px 10px;
+    box-shadow: 1px 3px 5px grey;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-top: 20px;
+}
+.products-card:hover{
+    background-color: #d193cb;
+}
+.product-img{
+    width: 90%;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: auto;
+}
+.search{
+    background-image: url(./img/blank-paper-with-gift-box-flower-branch.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: bottom center;
+    padding: 100px 0 50px 0px;
+    text-align: center;
+} 
+.search>h1{
+    font-size: 60px;
+    color: white;
+    padding-bottom: 50px;
+}
+input{
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    display: block;
+    margin: auto;
+    color: purple;
+}
+.search button{
+    border: 1px solid purple;
+    color: purple;
+    padding: 5px 50px;
+    border-radius: 30px;
+    display: block;
+    margin: auto;
+}
+#Contacts{
+    width: 100%;
+    height: 500px;
+    background-image: url(./img/marshmallows-near-blank-circular-frame-pink-backdrop_23-2147866181.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.contact-text{
+    width: 100%;
+    padding: 50px 10px 50px 33%;
+    text-align: center;
+    color: #B576AF;
+}
+.contact-text>p{
+    width: 500px;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    padding: 20px 0;
+}
+.contact-text>strong{
+    font-size: 25px;
+}
+footer{
+    width: 100%;
+    background-color: #B576AF;
+    color: white;
+    font-family: greatvibes;
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
+}
+@font-face {
+    font-family: greatvibes;
+    src: url(./fonts/GreatVibes-Regular.ttf);
+}
+@keyframes h1Animation {
+    from{
+        top: -20px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+@keyframes pAnimation {
+    from{
+        top: 20px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+@keyframes slickAnimation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes sparkleAnimation {
+    from{
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+    }
+    to{
+        width: 300px;
+        height: 300px;
+        opacity: 1;
+    }
+}
+@keyframes tabletSparkle {
+    from{
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+    }
+    to{
+        width: 170px;
+        height: 200px;
+        opacity: 1;
+    }
+} 
+@keyframes mobileSparcle {
+    from{
+        width: 80px;
+        height: 80px;
+        opacity: 0;
+    }
+    to{
+        width: 130px;
+        height: 150px;
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 992px){
+    #Home{
+        padding: 0px;
+        height: 880px;
+    }
+    .sparkle{
+        width: 170px;
+        height: 200px;
+        animation-name: tabletSparkle;
+    }
+    .toptext>h1{
+        font-size: 60px;
+        padding-top: 50px;
+    }
+    .toptext>p{
+        font-size: 100px;
+    }
+    .carousel-container{
+        width: 90%;
+        margin: auto;
+        height: 330px;
+    }
+    .carousel{
+        height: 330px;
+    }
+    .carousel-container>.slick-prev{
+        top: 400px;
+        left: 30%;
+}
+.carousel-container>.slick-next{
+        top: 400px;
+        right: 30%;
+}
+.aboutslider{
+    padding: 0 40px;
+}
+.aboutpic1{
+    width: 35%;
+    height: 300px;
+}
+.aboutpic2,
+.aboutpic22,
+.aboutpic23{
+    height: 240px;
+}
+.aboutitem>p{
+    font-size: 18px;
+    margin-top: 80px;
+}
+.products-card{
+    height: 350px;
+}
+.product-img{
+    height: 67%;
+    margin-bottom: 10px;
+}
+.products-card p{
+    font-size: 18px;
+}
+#Contacts{
+    height: 350px;
+}
+.contact-text{
+    padding: 20px 50px 20px 40%;
+}
+.contact-text>p{
+    width: 300px;
+}
+}
+@media only screen and (max-width:600px){
+    #Home{
+        height: 750px;
+    }
+    .sparkle{
+        width: 130px;
+        height: 150px;
+        animation-name: mobileSparcle;
+    }
+    .toptext{
+        padding: 50px 0 0 0;
+
+    }
+    .toptext>h1{
+        font-size: 35px;
+    }
+    .toptext>p{
+        font-size: 50px;
+    }
+    .carousel-container .slick-prev{
+        left: 25%;
+    }
+    
+    #About>h1{
+        font-size: 60px;
+    }
+    .aboutslider{
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+    .aboutitem{
+        padding: 0;
+    }
+    .aboutpic1{
+        width: 100%;
+    }
+    .aboutpic2,
+    .aboutpic22,
+    .aboutpic23{
+        width: 90%;
+        left: 5%;
+        top: 7%;
+    }
+    .aboutitem>p{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .aboutslider .slick-prev,
+    .aboutslider .slick-next{
+        padding: 15px;
+    }
+    .aboutslider .slick-prev{
+        left: -40px;
+    }
+    .search{
+        padding: 70px 0 50px 0;
+    }
+    .search>h1{
+        font-size: 40px;
+    }
+    input{
+        padding: 3px;
+    }
+    .search button{
+        padding: 2px 30px;
+    }
+    .products-card{
+        width: 40%;
+        height: 300px;
+    }
+    .product-img{
+        height: 63%;
+    }
+    .products-card p{
+        font-size: 16px;
+    }
+    #Contacts{
+        height: 300px;
+        background-size: cover;
+    }
+    .contact-text{
+        padding: 30px 6% 0 40%;
+    }
+    .contact-text>h1{
+        font-size: 20px;
+    }
+    .contact-text>p{
+        width: 100%;
+        font-size: 14px;
+    }
+    .contact-text>strong{
+        font-size: 18px;
+    }
+    footer{
+        font-size: 30px;
+    }
+}
