@@ -1326,7 +1326,7 @@ li>a{
         display: none;
     }
     #other{
-        height: 700px;
+        height: 600px;
     }
     #other>h1{
         font-size: 50px;
@@ -1754,6 +1754,7 @@ li>a{
         display: none;
     }
     #other{
+        height: 900px;
         padding: 0 30px;
     }
     .top{
