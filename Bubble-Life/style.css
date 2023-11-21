@@ -275,10 +275,7 @@
     margin: auto;
 }
 .search{
-    background-image: url(./img/blank-paper-with-gift-box-flower-branch.jpg);
-    background-attachment: fixed;
-    background-size: 100%;
-    background-position: bottom center;
+    background-color: #E5C6E5;
     padding: 100px 0 50px 0px;
     text-align: center;
 } 
