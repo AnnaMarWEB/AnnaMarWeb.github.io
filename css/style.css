@@ -1,0 +1,498 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.575);
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-bars{
+    color: white;
+    font-size: 20px;
+    display: none;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+ul>li{
+    padding: 0 50px;
+    border-right: 2px solid white;
+}
+li>a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+#Home{
+    width: 100%;
+    height: 650px;
+    background-image: url(../images/5384517172790940279_121.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.home-shadow{
+    width: 100%;
+    height: 650px;
+    background-color: rgba(0, 0, 0, 0.199);
+    padding: 200px 50px 100px 50px;
+}
+
+.home-info{
+    color: white ;
+    font-size: 30px;
+    float: right;
+    padding: 100px 40px;
+    background-color: rgba(0, 0, 0, 0.603);
+}
+#About{
+    width: 100%;
+    height: auto;
+    padding: 100px 70px;
+    background-color: rgb(230, 228, 228);
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;    
+    position: relative;
+}
+#About>h1{
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    color: #505475;
+}
+.about-img-back{
+    width: 30%;
+    height: 370px;
+    border: 20px solid #C2C5E1;
+    border-radius: 50%;
+    margin-top: 70px;
+}
+.about-img{
+    width: 30%;
+    height: 370px;
+    border-radius: 50%;
+    margin: auto;
+    background-image: url(../images/5384517172790940280_120.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;    
+    position: absolute;
+    left: 10%;
+    top: 29%;
+}
+.about-info{
+    padding: 50px;
+    width: 40%; 
+    height: auto;
+    background-color: #C2C5E1;
+    margin-top: 50px;
+}
+.about-info>strong{
+    font-size:25px;
+    color: rgb(117, 114, 114);
+}
+.about-info>h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #505475;
+}
+.about-info>p{
+    font-size: 21px;
+    line-height: 1.8;
+    color: #505475;
+}
+.about-info button{
+    padding: 10px 15px;
+    border: none;
+    background-color: #505475;
+    margin: 10px;
+    border-radius: 20px;
+}
+.about-info a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+#Skills{
+    width: 100%;
+    height: 950px;
+    background-color: #C2C5E1;
+    padding: 100px 50px;
+    color: #505475;
+}
+#Skills>h1,
+.also-use-skliis-box>h1{
+    font-size: 50px;
+    text-align: center;
+}
+.skill-box{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    padding: 100px 0;
+}
+.skills{
+    width: 19%;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #fff;
+    padding:80px 0;
+    box-shadow: 2px 4px 5px grey;
+    position: absolute;
+    top: 28%;
+}
+.skill1{
+    left: 25%;
+}
+.skill2{
+    left: 40%;
+}
+.skill3{
+    left: 55%;
+}
+.also-use-skliis-box{
+    width: 50%;
+    height: auto;
+    margin: auto;
+    margin-top: 100px;
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+}
+.also-use-skliis-box>h1{
+    margin-bottom: 20px;
+}
+.also-use-skills{
+    font-size: 30px;
+}
+#Skills a{
+    text-decoration: none;
+    color: #505475;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+#Portfolio{
+    width: 100%;
+    height: auto;
+    background-color: rgb(230, 228, 228);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 100px 70px;
+}
+#Portfolio>h1{
+    font-size: 50px;
+    color: #505475;
+}
+.portfolio-box{
+    padding: 70px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.portfolio{
+    width: 30%;
+    height: 200px;
+    text-align: center;
+    color: #505475;
+}
+.portfolio img{
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px grey;
+}
+#Contacts{
+    width: 100%;
+    height: auto;
+    padding: 100px;
+    background-image: url(../images/high-angle-desk-assortment-with-laptop\ \(1\).jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 40px;
+}
+.contacts-shadow{
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.596);
+    padding: 70px;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+@media only screen and (max-width:992px){
+    nav{
+        display: block;
+        padding: 25px 50px;
+    }
+    .fa-bars{
+        display: block;
+    }
+    ul{
+        width: 30%;
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px 50px;
+        background-color: rgba(0, 0, 0, 0.575);
+        display: none;
+    }
+    ul>li{
+        width: 80%;
+        border-right: none;
+        padding: 10px 0px;
+        border-bottom: 1px solid white;
+    }
+    li>A{
+        font-size: 20px;
+    }
+    #Home,
+    .home-shadow{
+        height: 400px;
+    }
+    .home-shadow{
+        padding: 150px 50px;
+    }
+    .home-info{
+        width: 40%;
+        height: auto;
+        font-size: 16px;
+        padding: 50px 20px;
+    }
+    #About{
+        padding: 70px 20px;
+        height: auto;
+    }
+    #About>h1{
+        font-size: 45px;
+    }
+    .about-img-back{
+        width: 200px;
+        height: 200px;
+        border: 10px solid #C2C5E1;
+    }
+    .about-img{
+        width: 200px;
+        height: 200px;
+        top: 38%;
+        left: 8%;
+    }
+    .about-info{
+        width: 55%;
+        padding: 30px;
+    }
+    .about-info>h1{
+        font-size: 25px;
+    }
+    .about-info>strong{
+        font-size: 18px;
+    }
+    .about-info button{
+        padding: 5px 10px;
+    }
+    .about-info a{
+        font-size: 16px;
+    }
+    #Skills{
+        height: 650px;
+        padding: 50px 30px;
+    }
+    #Skills>h1{
+        font-size: 40px;
+    }
+    .skill-box{
+        height: 250px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills{
+        width: 150px;
+        height: 150px;
+        padding:30px 20px;
+        position: static;
+        margin: 0 5px;
+    }
+    .skills>h2{
+        font-size: 18px;
+    }
+    .also-use-skliis-box{
+        width: 60%;
+        padding: 30px;
+        margin-top: 20px;  
+    }
+    .also-use-skliis-box>h1{
+        font-size: 40px;
+    }
+    .also-use-skills{
+        font-size: 22px;
+    }
+    #Skills a{
+        font-size: 22px;
+    }
+    #Portfolio{
+        padding: 50px 30px;
+    }
+    #Portfolio>h1{
+        font-size: 40px;
+    }
+    .portfolio-box{
+        padding: 40px 0;
+    }
+    .portfolio img{
+        height: 150px;
+    }
+    #Contacts{
+        padding: 50px;
+        font-size: 23px;
+    }
+    .contacts-shadow{
+        padding: 50px;
+    }
+    footer{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width:600px){
+    nav{
+        padding: 15px 20px;
+        z-index: 9;
+        background-color: rgba(0, 0, 0, 0.685);
+    }
+    ul{
+        padding: 10px 20px;
+        background-color: rgba(0, 0, 0, 0.685);
+        width: 50%;
+    }
+    li>a{
+        font-size: 17px;
+    }
+    #Home,
+    .home-shadow{
+        height: 280px;
+        position: relative;
+    }
+    .home-info{
+        position: absolute;
+        z-index: 8;
+        width: 60%;
+        text-align: center;
+        top: 75%;
+        left: 20%;
+        background-color: #C2C5E1;
+        color: #505475;
+    }
+    .home-info>h1{
+        font-size: 20px;
+    }
+    #About{
+        overflow: hidden;
+        padding: 100px 20px 50px 20px;
+        display: block;
+        height: auto;
+    }
+    .about-img-back{
+        display: none;
+    }
+    .about-img{
+        position: static;
+        width: 150px;
+        height: 150px;
+        margin-top: 30px;
+    }
+    .about-info{
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .about-info>p{
+        font-size: 18px;
+    }
+    #Skills{
+        padding: 50px;
+        height: auto;
+    }
+    #Skills>h1{
+        font-size: 30px;
+    }
+    .skill-box{
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills{
+        width: 100px;
+        height: 100px;
+        padding: 15px 10px;
+        position: static;
+    }
+    .skills>h2{
+        font-size: 15px;
+    }
+    .also-use-skliis-box{
+        width: 90%;
+    }
+    .also-use-skliis-box>h1{
+        font-size: 30px;
+    }
+    .also-use-skills{
+        font-size: 18px;
+    }
+    #Skills a{
+        font-size: 18px;
+        margin-top: 30px;
+    }
+    #Portfolio{
+        padding: 30px 20px;
+    }
+    #Portfolio>h1{
+        font-size: 30px;
+    }
+    .portfolio-box{
+        justify-content: center;
+    }
+    .portfolio{
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    #Contacts{
+        padding: 30px;
+    }
+    #Contacts{
+        font-size: 20px;
+    }
+    footer{
+        font-size: 18px;
+    }
+}

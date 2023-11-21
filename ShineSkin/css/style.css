@@ -1,0 +1,766 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+#Menu{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.fixed-img{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.103) ,#5388038c), url(../img/headerImg.jpg) ;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right ;
+
+}
+header img{
+    width: 60%;
+    height: 450px;
+    position: absolute;
+    bottom: -100px;
+    left: 0px;
+}
+nav{
+    width: 100%;
+    padding:20px 50px;
+}
+
+.logo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+#product-search{
+    margin-left: 50px;
+    width: 30%;
+    padding: 10px;
+    border: none;
+    color: #6D9D17;
+    border-radius: 30px;
+}
+#search-button{
+    margin-left: 10px;
+    background-color: #6D9D17;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#button{
+    width: 50px;
+    height: 50px;
+    background-color: #ffffffe1;
+    background-image: url(../img/pngwing.com.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center center;
+    border-radius: 50%;
+    border: none;
+    position: fixed;
+    z-index: 7;
+}
+#dropdown{
+    display: none;
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    background-color: #5388038c;
+    position: fixed;
+    z-index: 7;
+}
+#dropdown a{
+    color: white;
+    text-decoration: none;
+} 
+#dropdown li{
+    padding: 20px ;
+    border-bottom: 1px solid white;
+}
+.logo strong{
+    font-size: 30px;
+    color: white;
+    margin-left: 80px;
+}
+#Menu h1{
+    width: 70%;
+    font-size: 90px;
+    color: white;
+    text-align: center;
+    font-family: greatvibes;
+}
+.menu{
+    height: 560px;
+    padding: 100px 100px;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+#About{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 100px 100px 100px;
+    position: relative;
+}
+#about-leaves{
+    width: 50%;
+    height: 500px;
+    position: fixed;
+    right: 0px;
+    top: 400px;
+    transform: rotate(70deg);
+}
+#About h1{
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+.about-img{
+    width: 45%;
+    height: 600px;
+    background-image: url(../img/toa-heftiba-GLl6_-L3fxM-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 70px;
+}
+.about-text{
+    width: 45%;
+    margin-top: 70px;
+    padding: 100px 0;
+    text-align: center;
+    font-size: 20px;
+    color: #6D9D17;
+}
+.about-text p{
+    padding: 20px 0;
+    line-height: 1.3;
+}
+
+#about-stones{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 7%;
+    bottom: 10%;
+    transform: rotate(-10deg);
+}
+.products-text{
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/depositphotos_195609052-stock-photo-natural-cosmetics-for-home-or.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 0 0 0 ;
+    text-align: center;
+    position: relative;
+}
+#filter-open{
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/icons8-filter-50.png);
+    border: none;
+    background-color: #E8E3D9;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    cursor: pointer;
+    position: absolute;
+    top: 165px;
+    left: 150px;
+}
+.dropdown-select{
+    width: 80%;
+    background-color: #6e9d17ad;
+    padding: 70px 0px 170px 0px;
+    position: absolute;
+    left: 150px;
+    top: 220px;
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+}
+.dropdown-select>h1{
+    color: white;
+    padding: 0 0 50px 0;
+    font-size: 50px;
+}
+#Pname,
+#Pbrand,
+#skin-type,
+#Pcountry,
+#effect,
+#type{
+    color: #6D9D17;
+    padding: 10px 20px;
+    border: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+#filter-button{
+    padding: 10px 30px;
+    color: #6D9D17;
+    background-color: #fff;
+    border: none;
+    font-size: 18px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+#Products{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    background-image: url(../img/depositphotos_195609052-stock-photo-natural-cosmetics-for-home-or.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    padding: 20px 100px 100px 100px;
+}
+.products-text>h1{
+    width: 100%;
+    font-size: 70px;
+    padding: 0 0 100px 0;
+    color: #6D9D17;
+}
+.product-card{
+    width: 28%;
+    height: 450px;
+    background-color: #ffffffb9;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 1px 3px 5px #6D9D17;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.review{
+    width: 100%;
+    height: 650px;
+    background-color: #6e9d17a4;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+}
+.review-img{
+    width: 50%;
+    height: 500px;
+}
+.product-card:hover{
+    background-color: #fff;
+}
+.products-img{
+    width: 90%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: auto;
+   
+}
+.product-card p{
+    font-size: 20px;
+    color: #6D9D17;
+}
+.carousel-container {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+.slick-list {
+    overflow: hidden;
+}
+.slick-track {
+    display: flex;
+}
+.carousel{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    width: 30%;
+    height: 500px;
+    border: 2px solid #6D9D17;
+}
+.carousel1{
+    background-image: url(../img/chandra-oh-01M4_XKKSiE-unsplash.jpg);
+}
+.carousel2{
+    background-image: url(../img/vya-naturals-RVg8q37bsAM-unsplash.jpg);
+}
+.carousel3{
+    background-image: url(../img/apothecary-87-KgyuyzxYyRw-unsplash.jpg);
+}
+.carousel4{
+    background-image: url(../img/aboutimg1.jpg);
+}
+.carousel5{
+    background-image: url(../img/onne-beauty-lZ7tao79Y1A-unsplash.jpg);
+    background-size: cover;
+}
+.carousel6{
+    background-image: url(../img/jacinta-christos-4wO5GON3mg4-unsplash.jpg);
+    background-size: cover;
+}
+.carousel7{
+    background-image: url(../img/nora-topicals-Fyd9rSbpdVM-unsplash.jpg);
+    background-size: cover;
+}
+.carousel8{
+    background-image: url(../img/pexels-rdne-stock-project-6724357.jpg);
+}
+.carousel9{
+    background-image: url(../img/gabrielle-henderson-1DMNn6gBbwQ-unsplash.jpg);
+    background-size: cover;
+}
+.carousel10{
+    background-image: url(../img/jacinta-christos-kSj37Re1VZQ-unsplash.jpg);
+    background-size: cover;
+}
+.carousel11{
+    background-image: url(../img/uby-yanes-QMZXBGmBuj4-unsplash.jpg);
+}
+.carousel12{
+    background-image: url(../img/pexels-polina-tankilevitch-3736519.jpg);
+    background-position: bottom right;
+}
+.carousel13{
+    background-image: url(../img/pexels-cottonbro-studio-3737594.jpg);
+    background-size: cover;
+}
+.carousel14{
+    background-image: url(../img/susan-wilkinson-wG1FPyeO75Y-unsplash.jpg);
+    background-size: cover;
+}
+.carousel15{
+    background-image: url(../img/pexels-karolina-grabowska-4202937.jpg);
+    background-position: bottom;
+}
+.shadow{
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.137);
+    text-align: center;
+    padding: 200px 0;
+    color: white;
+}
+.slick-prev,
+.slick-next{
+    width: 100px;
+    padding: 5px;
+    position: absolute;
+    bottom: 50px;
+    color: white;
+    background-color: #6D9D17;
+    border: none;
+    border-radius: 20px;
+}
+.slick-prev:hover,
+.slick-next:hover{
+    background-color: #acdf4e;
+}
+.slick-prev{
+    z-index: 7;
+    left: 40%;
+}
+.slick-next{
+    right: 40%;
+
+}
+#Contacts{
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/elsa-olofsson-Pm0K9Y3EPUc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.contact-shadow{
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.349);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-shadow>.contact-left{
+    width: 45%;
+}
+.contact-left{
+    padding: 130px 0 0px 100px;
+    
+}
+.contact-left>h1{
+    font-size: 60px;
+}
+.contact-left>p{
+    font-size: 21px;
+}
+.contact-left>strong{
+    font-size: 30px;
+}
+.contact-shadow>iframe{
+    height: 400px;
+    width: 40%;
+    margin: auto 30px;
+}
+.work-time{
+    width: 100%;
+    height: 100px;
+    color: white;
+    font-size: 20px;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.footer-logo{
+    width: 50px;
+    height: 50px;
+    background-color: #ffffffe1;
+    background-image: url(../img/pngwing.com.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center center;
+    border-radius: 50%;
+    border: none;
+}
+footer>h1{
+    margin-left: 10px;
+}
+@font-face {
+    font-family: greatvibes;
+    src: url(../fonts/GreatVibes-Regular.ttf);
+}
+@media only screen and (max-width:992px){
+    .logo strong{
+        font-size: 25px;
+        margin-left: 60px;
+    }
+    #button{
+        width: 40px;
+        height: 40px;
+    }
+    #product-search,
+    #search-button{
+        padding: 5px 10px;
+    }
+    #dropdown li{
+        padding: 10px;
+    }
+    .menu{
+        padding: 60px 100px;
+        height: 450px;
+    }
+    #Menu h1{
+        font-size: 50px;
+    }
+    header img{
+        top: 240px;
+        height: 350px;
+    }
+    #about-leaves{
+        top: 320px;
+        height: 300px;
+    }
+    #About{
+        padding: 50px 30px 100px 30px;
+    }
+    #About h1{
+        font-size: 40px;
+    }
+    .about-img{
+        height: 450px;
+    }
+    .about-text{
+        padding: 0;
+        height: 450px;
+        font-size: 16px;
+    }
+    #about-stones{
+        width: 100px;
+        height: 100px;
+        bottom: 7%;
+        left: 4%;
+    }
+    .carousel-container{
+        height: 350px;
+    }
+    .carousel{
+        height: 350px;
+    }
+    .slick-prev, .slick-next{
+        padding: 3px;
+    }
+    .slick-prev{
+        left: 30%;
+    }
+    .slick-next{
+        right: 30%;
+    }
+    .products-text{
+        padding: 100px 0 0 0;
+        height: 200px;
+    }
+    .products-text>h1{
+        font-size: 50px;
+    }
+    #filter-open{
+        width: 35px;
+        height: 35px;
+        top: 58%;
+        left: 10%;
+    }
+    .dropdown-select{
+        width: 80%;
+        padding: 80px 10px;
+        left: 10%;
+        top: 80%;
+    }
+    .dropdown-select>h1{
+        font-size: 40px;
+    }
+    #Pname, #Pbrand, #skin-type, #Pcountry, #effect, #type {
+        padding: 5px;
+        margin-left: 0px;
+        font-size: 16px;
+    }
+    #filter-button{
+        margin-top: 50px;
+        padding: 5px 20px;
+        font-size: 16px;
+    }
+    #Products{
+        padding: 20px 50px 50px 50px;
+    }
+    .product-card{
+        margin: 10px;
+        height: 300px;
+        padding: 20px 10px;
+    }   
+    .products-img{
+        height: 60%;
+        background-position: center center;
+    }
+    .product-card p{
+        font-size: 15px;
+    }
+    .shadow{
+        padding: 100px 0;
+    }
+    .shadow>h1{
+        font-size: 30px;
+    }
+    #Contacts{
+        height: 400px;
+    }
+    .contact-left{
+        padding: 100px 0 0 50px;
+    }
+    .contact-left>h1{
+        font-size: 40px;
+    }
+    .contact-left>p{
+        font-size: 18px;
+    }
+    .contact-left>strong{
+        font-size: 25px;
+    }
+    .contact-shadow{
+        height: 400px;
+        margin-right: 30px;
+    }
+    .contact-shadow>iframe{
+        height: 90%;
+    }
+    footer{
+        height: 80px;
+    }
+    .footer-logo{
+        width: 35px;
+        height: 35px;
+    }
+    footer>h1{
+        font-size: 25px;
+        margin: auto 10px;
+    }
+}
+@media only screen and (max-width:750px){
+    nav{
+        padding: 10px 20px;
+    }
+    #button{
+        width: 35px;
+        height: 35px;
+    }
+    .logo strong{
+        font-size: 20px;
+        margin-left: 50px;
+    }
+    #product-search,
+    #search-button{
+        display: none;
+    }
+    .menu{
+        padding: 50px 20px;
+        height: 300px;
+    }
+    #Menu h1{
+        font-size: 30px;
+        width: 75%;
+        color: #6D9D17;
+    }
+    header img{
+        top: 45%;
+        height: 150px;
+        width: 50%;
+    }
+    #about-leaves{
+        top: 60%;
+        height: 150px;
+        width: 50%;
+    }
+    #About{
+        padding: 0px 20px 80px 20px;
+    }
+    #About h1{
+        font-size: 30px;
+    }
+    .about-img{
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center center ;
+        margin-top: 20px;
+    }
+    .about-text{
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.664);
+        padding: 15px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    #about-stones{
+
+        width: 70px;
+        height: 70px;
+    }
+    .carousel-container{
+        height: 250px;
+    }
+    .carousel{
+        height: 250px;
+    }
+    #Products{
+        padding: 50px 20px;
+    }
+    .product-card{
+        width: 40%;
+        height: 250px;
+        padding: 10px 10px 20px 10px;
+    }
+    .products-img{
+        width: 100%;
+    }
+    .product-card p{
+        margin: 0;
+    }
+    .slick-prev,
+    .slick-next{
+        font-size: 14px;
+    }
+    .slick-prev{
+        left: 20%;
+    }
+    .slick-next{
+        right: 20%;
+    }
+    .products-text{
+        padding-top: 50px;
+        height: 100px;
+    }
+    .products-text>h1{
+        font-size: 30px;
+        padding-bottom: 50px;
+    }
+    #filter-open{
+        width: 25px;
+        height: 25px;
+    }
+    .dropdown-select{
+        padding: 20px;
+        display: block;
+    }
+    .dropdown-select>h1{
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
+    #Pname, #Pbrand, #skin-type, #Pcountry, #effect, #type{
+        margin: 5px;
+        font-size: 14px;
+    }
+    #filter-button{
+        margin-top: 20px;
+    }
+    #Contacts{
+        height: auto;
+    }
+    .contact-shadow{
+        padding: 20px;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .contact-shadow>.contact-left{
+        width: 100%;
+        padding: 0;
+    }
+    .contact-left>strong{
+        font-size: 20px;
+    }
+    .contact-left>h1{
+        font-size: 20px;
+    }
+    .contact-left>p{
+        font-size: 14px;
+    }
+    .contact-shadow>iframe{
+        width: 100%;
+        height: 200px;
+        margin: auto;
+    }
+    footer{
+        height: 50px;
+    }
+    .footer-logo{
+        width: 30px;
+        height: 30px;
+    }
+    footer>h1{
+        font-size: 20px;
+    }
+}
