@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShineSkin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="Menu">
+        <div class="fixed-img"></div>
+        <nav>
+            <div class="logo">
+            <button id="button" onclick="menuOpen()"></button>
+            <strong>SHINESKIN</strong>
+            <input type="search" id="product-search" placeholder="Search">
+            <button id="search-button">Search</button>
+        </div>
+           <ul id="dropdown">
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#About">About us</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#Contacts">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="menu">
+        <h1>Find your own skin care with us</h1>
+        <img src="img/leaf.png" alt="Leaf" id="headerimg">
+        </div>
+    </header>
+    <section id="About">
+        <img src="./img/pngwing.com (2).png" alt="" id="about-leaves">
+        <h1>ABOUT US</h1>
+        <div class="about-img"></div>
+        <div class="about-text">
+            <h3>Shineskin</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati accusamus laudantium nesciunt illum, aliquam quis! Exercitationem qui nemo dolores sint, harum ea magni, animi molestiae perferendis, sunt asperiores nobis cum! Culpa voluptate rem placeat sed molestiae iusto natus porro autem doloribus eum ad expedita explicabo dolore optio et, a illo quisquam fuga ducimus ipsam aspernatur nobis cum beatae velit? Fugiat molestias repellendus corrupti nam odio accusamus, explicabo laudantium hic doloribus illum vitae doloremque velit ex, debitis aspernatur repellat itaque, distinctio porro consequatur. Molestiae rem molestias sint, porro libero, tempore sunt aut velit eum beatae, provident ipsam deleniti sed consectetur aliquam!</p>
+        </div>
+        <img src="./img/pngwing.com (1).png" alt="pic" id="about-stones">
+    </section>
+    <section id="other-one">
+        <div class="carousel-container">
+            <div class="carousel carousel10">
+                <div class="shadow">
+                </div>
+            </div>
+            <div class="carousel carousel11">
+                <div class="shadow">
+                </div>
+            </div>
+            <div class="carousel carousel12">
+                <div class="shadow">
+                </div>
+            </div>
+            <div class="carousel carousel13">
+                <div class="shadow">
+                </div>
+            </div>
+            <div class="carousel carousel14">
+                <div class="shadow">
+                </div>
+            </div>
+            <div class="carousel carousel15">
+                <div class="shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="products-text">
+    <h1>OUR PRODUCTS</h1>
+    
+    <button id="filter-open" onclick="menuOpen2()"></button>
+    <div class="dropdown-select">
+        <h1>Filter</h1>
+        <select name="name" id="Pname">
+            <option value="">Choose the product</option>
+            <option value="Moisturizer">Moisturizer</option>
+            <option value="Lotion">Lotion</option>
+            <option value="Serum">Serum</option>
+            <option value="Kit">Kit</option>
+            <option value="Cleansing bar">Cleansing bar</option>
+            <option value="Toner">Toner</option>
+            <option value="Mask">Mask</option>
+            <option value="SPF">SPF</option>
+        </select>
+        <select name="brand" id="Pbrand">
+            <option value="">Choose the brand</option>
+            <option value="Some by mi">Some by mi</option>
+            <option value="Clinique">Clinique</option>
+            <option value="Vichy">Vichy</option>
+            <option value="Caudalie">Caudalie</option>
+            <option value="Bioderma">Bioderma</option>
+            <option value="Dr.Ceuracle">Dr.Ceuracle</option>
+            <option value="Avene">Avene</option>
+            <option value="Too cool for school">Too cool for school</option>
+        </select>
+        <select name="skintype" id="skin-type">
+            <option value="">Choose the skin type</option>
+            <option value="For all skin types">For all skin types</option>
+            <option value="Dry skin">Dry skin</option>
+            <option value="sensitive">Sensitive skin</option>
+        </select>
+        <select name="country" id="Pcountry">
+            <option value="">Country of origin</option>
+            <option value="France">France</option>
+            <option value="South Korea">South Korea</option>
+            <option value="USA">USA</option>
+        </select>
+        <select name="effect" id="effect">
+            <option value="">Effects</option>
+            <option value="Anti age">Anti age</option>
+            <option value="Anti acne">Anti acne</option>
+            <option value="Plumps skin">Plumps skin</option>
+            <option value="calming">Calming</option>
+            <option value="soothing">Soothing</option>
+        </select>
+        <select name="type" id="type">
+            <option value="">Type</option>
+            <option value="Day">Day</option>
+            <option value="night">Night</option>
+            <option value="Universal">Universal</option>
+        </select>
+        <button id="filter-button">Filter</button>
+    </div>
+</div>
+    <section id="Products">
+    </section>
+    <section id="other">
+        <div class="carousel-container">
+            <div class="carousel carousel1">
+                <div class="shadow">
+                <h1>RELATABLE SHIPPING</h1>
+            </div>
+            </div>
+            <div class="carousel carousel2">
+                <div class="shadow">
+                    <h1>RELATABLE PARTNERS</h1>
+                </div>
+            </div>
+            <div class="carousel carousel3">
+                <div class="shadow">
+                    <h1>FREE SHIPPING</h1>
+                </div>
+            </div>
+            <div class="carousel carousel4">
+                <div class="shadow">
+                    <h1>FAST SHIPPING</h1>
+                </div>
+            </div>
+            <div class="carousel carousel5">
+                <div class="shadow">
+                    <h1>FAST CONNECTION</h1>
+                </div>
+            </div>
+            <div class="carousel carousel6">
+                <div class="shadow">
+                    <h1>WIDE VARIETY OF PRODUCTS</h1>
+                </div>
+            </div>
+            <div class="carousel carousel7">
+                <div class="shadow">
+                    <h1>ALWAYS IN TOUCH</h1>
+                </div>
+            </div>
+            <div class="carousel carousel8">
+                <div class="shadow">
+                    <h1>NICE PRICES</h1>
+                </div>
+            </div>
+            <div class="carousel carousel9">
+                <div class="shadow">
+                    <h1>UPDATING PRODUCTS</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Contacts">
+        <div class="contact-shadow">
+            <div class="contact-left">
+                <h1>Contact us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa, nihil fugiat eum odio voluptates! Voluptatem, eligendi. Fugit, dicta sapiente.</p>
+                <strong>+0 123 45 67 89</strong>
+                <div class="work-time"></div>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30965.495590518338!2d126.97007128310068!3d37.565943197538544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ef73e922b3%3A0xc7ef957ff565181e!2zKOyjvCnsi6DslpHsmKTslKg!5e0!3m2!1sru!2sam!4v1697785332563!5m2!1sru!2sam" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-logo"></div>
+        <h1>SHINESKIN</h1>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="./slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('.carousel-container').slick({
+      slidesToShow:3,
+      speed:1000,
+      autoplay:true,
+      responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  
+
+    ]
+    });
+  });
+  $(document).ready(function(){
+    $('.about-slider').slick({
+      slidesToShow:1,
+      speed:1000,
+      autoplay:true,
+      responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    ]
+    });
+  });
+      </script>
+</body>
+</html>
