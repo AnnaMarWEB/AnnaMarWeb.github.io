@@ -151,7 +151,7 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: bottom center;
-    background-size: 100%;
+    background-size: cover;
     padding: 50px;
 }
 #About>h1{
