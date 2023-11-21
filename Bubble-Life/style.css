@@ -250,7 +250,7 @@
     background-image: url(./img/blank-paper-with-gift-box-flower-branch.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: bottom center;
 }
 .products-card{
