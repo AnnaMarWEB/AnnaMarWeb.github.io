@@ -5,6 +5,20 @@
     list-style: none;
     text-decoration: none;
 }
+.scrollbar{
+    width: 100%;
+    height: 8px;
+    background-color: #E8E3D9;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+.progress{
+    width: 0;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #6D9D17;
+}
 #Menu{
     width: 100%;
     height: 100%;
@@ -247,7 +261,7 @@ nav{
 }
 .product-card{
     width: 28%;
-    height: 450px;
+    height: auto;
     background-color: #ffffffb9;
     padding: 20px;
     margin: 20px;
@@ -256,17 +270,89 @@ nav{
     border-radius: 20px;
     cursor: pointer;
 }
-.review{
+.btn{
+    font-size: 20px;
+    color: #6D9D17;
+}
+.product-view{
     width: 100%;
-    height: 650px;
-    background-color: #6e9d17a4;
+    height: 100%;
+    background-color: #6e9d17ec;
     position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 100px;
+    z-index: 9;
 }
-.review-img{
+.product-view-img{
+    width: 35%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 2px 4px 5px grey;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+.product-view-right{
     width: 50%;
-    height: 500px;
+    padding: 60px 0;
+}
+.minus-mark,
+.product-view-span,
+.plus-mark{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.final-price{
+    color: white;
+    font-size: 25px;
+}
+.x-mark,
+.buy-menu-btn{
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    right: 2%;
+    top: 0;
+    cursor: pointer;
+}
+.buy-btn{
+    padding: 10px 20px;
+    background-color: #E8E3D9;
+    color: #6D9D17;
+    border: none;
+    border-radius: 20px;
+}
+.buy-menu{
+    width: 100%;
+    height: 100%;
+    background-color: #E8E3D9;
+    color: #6D9D17;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.warning{
+    font-size: 18px;
+}
+.product-info{
+    font-size: 30px;
+    color: white;
 }
 .product-card:hover{
     background-color: #fff;
@@ -282,6 +368,37 @@ nav{
 .product-card p{
     font-size: 20px;
     color: #6D9D17;
+}
+
+.question-container{
+    width: 90%;
+    height: 90%;
+    border: 3px solid #6D9D17;
+    border-radius: 30px;
+    padding: 70px;
+    text-align: start;
+} 
+.buy-menu-btn{
+    color: #6D9D17;
+    border: none;
+    background: transparent;
+}
+.question{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.answer{
+    font-size: 25px;
+}
+.next-btn{
+    background-color: #6D9D17;
+    padding: 10px 30px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 3px 4px grey;
+    margin-top: 50px;
+    font-size: 20px;
 }
 .carousel-container {
     width: 100%;
@@ -359,7 +476,7 @@ nav{
 .shadow{
     width: 100%;
     height: 500px;
-    background-color: rgba(0, 0, 0, 0.137);
+    background-color: rgba(0, 0, 0, 0.432);
     text-align: center;
     padding: 200px 0;
     color: white;
@@ -560,7 +677,7 @@ footer>h1{
     }
     .product-card{
         margin: 10px;
-        height: 300px;
+        height: 350px;
         padding: 20px 10px;
     }   
     .products-img{
@@ -568,8 +685,55 @@ footer>h1{
         background-position: center center;
     }
     .product-card p{
-        font-size: 15px;
+        font-size: 13px;
+        margin: 5px;
     }
+    .product-view{
+        padding: 50px;
+    }
+    .product-view-img{
+        width: 40%;
+    }
+    .product-view-right{
+        padding: 0;
+    }
+    .btn{
+        font-size: 18px;
+    }
+    .minus-mark,
+    .product-view-span,
+    .plus-mark{
+        font-size: 20px;
+    }
+    .x-mark,
+    .buy-menu-btn{
+        font-size: 27px;
+    }
+    .product-info{
+        font-size: 20px;
+    }
+    .final-price{
+        font-size: 20px;
+    }
+    .question{
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .answer{
+        font-size: 20px;
+    }
+    .next-btn{
+        font-size: 18px;
+        padding: 5px 20px;
+        margin-top: 30px;
+    }
+    .warning{
+        font-size: 16px;
+    }
+    .question-container{
+        padding: 10px 30px 30px 30px;
+    }
+    .product-
     .shadow{
         padding: 100px 0;
     }
@@ -631,9 +795,9 @@ footer>h1{
         height: 300px;
     }
     #Menu h1{
-        font-size: 40px;
-        width: 45%;
-        color: #fff;
+        font-size: 30px;
+        width: 75%;
+        color: #6D9D17;
     }
     header img{
         top: 45%;
@@ -641,7 +805,7 @@ footer>h1{
         width: 50%;
     }
     #about-leaves{
-        top: 30%;
+        top: 60%;
         height: 150px;
         width: 50%;
     }
@@ -681,14 +845,49 @@ footer>h1{
     }
     .product-card{
         width: 40%;
-        height: 250px;
+        height: 320px;
         padding: 10px 10px 20px 10px;
+    }
+    .btn{
+        font-size: 16px;
+    }
+    .product-view{
+        padding: 30px;
+    }
+    .x-mark{
+        font-size: 25px;
+    }
+    .product-view-img{
+        width: 60%;
+        height: 60%;
     }
     .products-img{
         width: 100%;
     }
     .product-card p{
-        margin: 0;
+        margin: 5px;
+        font-size: 11px;
+    }
+    .minus-mark,
+    .product-view-span,
+    .plus-mark,
+    .final-price{
+        font-size: 16px;
+}
+    .buy-btn{
+        padding: 5px 15px;
+    }
+    .product-info{
+        font-size: 16px;
+    }
+    .question{
+        font-size: 25px;
+    }
+    .answer{
+        font-size: 18px;
+    }
+    .next-btn{
+        font-size: 16px;
     }
     .slick-prev,
     .slick-next{
@@ -714,6 +913,7 @@ footer>h1{
     }
     .dropdown-select{
         padding: 20px;
+        display: none;
     }
     .dropdown-select>h1{
         font-size: 25px;
@@ -725,6 +925,12 @@ footer>h1{
     }
     #filter-button{
         margin-top: 20px;
+    }
+    .shadow{
+        padding: 100px 0;
+    }
+    .shadow>h1{
+        font-size: 20px;
     }
     #Contacts{
         height: auto;
