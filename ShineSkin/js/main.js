@@ -277,9 +277,27 @@ let productList=[
         img:"url(img/o3rz5a3yiry9km6843bt1jphn3z0n8kh.jpg)"
     },
 ]
+let buyingProcess=[
+    {
+        question:"Select a country for delivery",
+        answer:["USA","South Korea","Germany","Armenia","Georgia","France"],
+        checked:[1]
+    },
+    {
+        question:"Select delivery method",
+        answer:["Air delivery","Delivery by steamship"],
+        checked: [2],
+    },
+    {
+        question:"Select the payment method",
+        answer:["VISA","PayPal","ArCa","Mastercard"],
+        checked:[3]
+    }
+]
 productList.forEach(showProduct)
 
 console.log(productList)
+let progress=document.querySelector(".progress");
 let headerImg=document.querySelector("#headerimg");
 let aboutLeaves=document.querySelector("#about-leaves");
 let products=document.querySelector("#Products")
@@ -294,7 +312,25 @@ let productCountry=document.querySelector("#Pcountry");
 let productType=document.querySelector("#type");
 let productEffect=document.querySelector("#effect")
 let workTime=document.querySelector(".work-time");
-let menuBtn=document.querySelector("#button")
+let menuBtn=document.querySelector("#button")    
+let question=document.createElement("p");
+let answer=document.createElement("div");
+let questionContainer=document.createElement("div");
+let answerIndex=0;
+let buyMenu=document.createElement("div");
+let nextBtn=document.createElement("button");
+
+
+
+window.addEventListener("scroll", function(){
+    let allHeight=document.body.scrollHeight-document.documentElement.clientHeight;
+    console.log(allHeight);
+    let minScroll=window.scrollY;
+    progress.style.width=minScroll*100/allHeight+"%"
+})
+
+
+
 window.addEventListener("scroll", function(){
     let value=window.scrollY;
     headerImg.style.left= value * -2 + "px";
@@ -310,7 +346,7 @@ searchButton.addEventListener("click",function(item){
         return item.brand.toLocaleLowerCase().includes(productSearch.value.toLocaleLowerCase())
     })
   
-    filterBrand.forEach( showProduct)
+    filterBrand.forEach(showProduct)
         
 })
 filterButton.addEventListener("click",function(item){
@@ -326,8 +362,10 @@ filterButton.addEventListener("click",function(item){
     filterAll.forEach(showProduct)
 })
 let d=new Date();
-    let workDay=d.getDay()
-    let time=d.getHours()
+let workDay=d.getDay()
+let time=d.getHours()
+
+
     if(workDay>=1 && workDay<=5 && time>=9 && time<18){
         workTime.innerHTML="Now: Open"
 }else{
@@ -344,7 +382,114 @@ function showProduct(item){
     productCard.innerHTML+=`
     <p>${item.name}-${item.brand}</p>
     <p>${item.format}</p>
-    <p> Price-${item.price}$</p>`
+    <p> Price-${item.price}$</p>`;
+    let btn=document.createElement("button")
+    btn.className="btn";
+    btn.innerHTML+="Order now"
+    productCard.append(btn)  
+    btn.addEventListener("click",function(){
+        document.body.style.overflow="hidden"
+        let productView=document.createElement("div");
+        productView.className="product-view";
+        products.append(productView);
+        let productViewImg=document.createElement("div");
+        productViewImg.className="product-view-img";
+        productView.append(productViewImg);
+        productViewImg.style.backgroundImage=item.img;
+        let productViewRight=document.createElement("div")
+        productView.append(productViewRight)
+        productViewRight.className="product-view-right";
+        let productInfo=document.createElement("p");
+        productInfo.innerHTML=`${item.name}<br>
+        ${item.for}<br>
+        ${item.type}<br>
+        Price-${item.price}$;`
+        productViewRight.append(productInfo);
+        productInfo.className="product-info";
+        let minusMark=document.createElement("span");
+        minusMark.innerHTML="-";
+        minusMark.className="minus-mark";
+        productViewRight.append(minusMark)
+        let productViewSpan=document.createElement("span");
+        productViewRight.append(productViewSpan);
+        productViewSpan.className="product-view-span"
+        productViewSpan.innerHTML=1;
+        productViewSpan.value=1;
+        let plusMark=document.createElement("span");
+        plusMark.innerHTML="+";
+        plusMark.className="plus-mark";
+        productViewRight.append(plusMark);
+
+
+
+        let count;
+        minusMark.addEventListener("click",function(){
+            productViewSpan.innerHTML=`${--productViewSpan.value}`
+            count=productViewSpan.value*item.price;
+            finalPrise.innerHTML=`Final price=${count}$`
+        })
+
+
+
+        plusMark.addEventListener("click",function(){
+            productViewSpan.innerHTML=`${++productViewSpan.value}`
+            count=productViewSpan.value*item.price;
+            finalPrise.innerHTML=`Final price=${count}$`
+        })
+
+
+
+        let finalPrise=document.createElement("p")
+        count=productViewSpan.value*item.price;
+        finalPrise.innerHTML=`Final price=${count}$`;
+        finalPrise.className="final-price"
+        productViewRight.append(finalPrise)
+        let xmark=document.createElement("div")
+        productViewRight.append(xmark)
+        xmark.className="x-mark"
+        xmark.innerHTML=`<i class="fa-solid fa-xmark"></i>`;
+        xmark.addEventListener("click",function(){
+            productView.style.display="none"
+            document.body.style.overflow="scroll"
+        }) 
+
+
+
+
+
+        let buyBTN=document.createElement("button");
+        buyBTN.innerHTML="Buy now";
+        productViewRight.append(buyBTN);
+        buyBTN.className="buy-btn"
+        buyBTN.addEventListener("click",function(){
+            //productView.style.display="none";
+            document.body.style.overflow="hidden";
+
+            buyMenu.className="buy-menu";
+            products.append(buyMenu);
+            buyMenu.append(questionContainer);
+            questionContainer.className="question-container";
+            questionContainer.append(question);
+            question.className="question";
+            questionContainer.append(answer)
+            answer.className="answer";
+            questionContainer.append(nextBtn);
+            nextBtn.className="next-btn";
+            nextBtn.innerHTML="Next"
+            showQuestion()
+            nextBtn.addEventListener("click",showNextQuestion)
+            let buyMenuBtn=document.createElement("button")
+            buyMenuBtn.className="buy-menu-btn";
+            buyMenu.append(buyMenuBtn);
+            buyMenuBtn.innerHTML=`<i class="fa-solid fa-xmark"></i>`
+            buyMenuBtn.addEventListener("click",function(){
+                buyMenu.remove();
+                questionContainer.innerHTML=""
+                answer.innerHTML="";
+                question.innerHTML=""
+            })
+        })
+    })
 }
 function cleanproduct(){
     products.innerHTML=""
@@ -361,5 +506,62 @@ function menuOpen2(){
         dropdownSelect.style.display="block"
     }else{
         dropdownSelect.style.display="none"
+    }
+}
+
+function clearQuestion(){
+    answer.innerHTML="";
+    question.innerHTML=""
+}
+
+function showQuestion(){
+    question.innerHTML+=buyingProcess[answerIndex].question;
+    if(buyingProcess[answerIndex].checked.length==1){
+        for(let i=0;i<buyingProcess[answerIndex].answer.length;i++){
+             answer.innerHTML+=`<input type="radio" id="answer${i+1}" name="answer" value="${i+1}">
+             <label for="answer${i+1}">${buyingProcess[answerIndex].answer[i]}</label><br>`
+        }
+    }else{
+        for(let i=0;i<buyingProcess[answerIndex].answer.length;i++){
+            answer.innerHTML+=`<input type="radio" id="answer${i+1}" name="answer" value="${i+1}">
+            <label for="answer${i+1}">${buyingProcess[answerIndex].answer[i]}</label><br>`
+        }
+    }  
+    
+}
+let warning=document.createElement("p");
+questionContainer.prepend(warning)
+warning.className="warning"
+function checkAnswer(){
+    let checkedAnswer=document.querySelectorAll("input:checked");
+    if(checkedAnswer.length==0){
+        warning.innerHTML="Pleace select the country for delivery!";
+        answerIndex--
+    }else{
+        warning.innerHTML=""
+    }
+    console.log(checkedAnswer)
+}
+function showNextQuestion(){
+    console.log("ok")
+    checkAnswer();
+    clearQuestion();
+    answerIndex++;
+    if(answerIndex<buyingProcess.length){
+    showQuestion()
+    } else{
+        question.innerHTML="Order Confirmed!"
+        nextBtn.style.display="none";
+        question.style.textAlign="center"
+        let buyMenuBtn=document.createElement("button")
+        buyMenuBtn.className="buy-menu-btn";
+        buyMenu.append(buyMenuBtn);
+        buyMenuBtn.innerHTML=`<i class="fa-solid fa-xmark"></i>`
+        buyMenuBtn.addEventListener("click",function(){
+            nextBtn.style.display="block"
+            buyMenu.remove();
+        })
+        answerIndex=0;
+        
     }
 }
