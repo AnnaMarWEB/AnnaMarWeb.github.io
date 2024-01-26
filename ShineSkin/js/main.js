@@ -453,7 +453,7 @@ function showProduct(item){
         let xmark=document.createElement("div")
         productViewRight.append(xmark)
         xmark.className="x-mark"
-        xmark.innerHTML=`<i class="fa-solid fa-xmark"></i>`;
+        xmark.innerHTML=`x`;
         xmark.addEventListener("click",function(){
             productView.style.display="none"
             document.body.style.overflow="scroll"
@@ -487,7 +487,7 @@ function showProduct(item){
             let buyMenuBtn=document.createElement("button")
             buyMenuBtn.className="buy-menu-btn";
             buyMenu.append(buyMenuBtn);
-            buyMenuBtn.innerHTML=`<i class="fa-solid fa-xmark"></i>`
+            buyMenuBtn.innerHTML=`x`
             buyMenuBtn.addEventListener("click",function(){
                 buyMenu.remove();
                 questionContainer.innerHTML=""
@@ -562,7 +562,7 @@ function showNextQuestion(){
         let buyMenuBtn=document.createElement("button")
         buyMenuBtn.className="buy-menu-btn";
         buyMenu.append(buyMenuBtn);
-        buyMenuBtn.innerHTML=`<i class="fa-solid fa-xmark"></i>`
+        buyMenuBtn.innerHTML=`x`
         buyMenuBtn.addEventListener("click",function(){
             nextBtn.style.display="block"
             buyMenu.remove();
