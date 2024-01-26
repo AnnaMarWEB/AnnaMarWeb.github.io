@@ -1,6 +1,12 @@
 "use strict";
 
+let preloader=document.querySelector(".preloader");
+document.body.onload=function(){
+    setTimeout(function(){
+        preloader.classList.add("hidden")
 
+    },1000)
+}
 let productList=[
     {
         id: 1,
