@@ -265,6 +265,7 @@ li>a{
     height: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 150px 0;
 }
 .about-top>.left{
@@ -276,9 +277,6 @@ li>a{
     width: 35px;
     height: 35px;
     background-image: url(../img/Union.svg);
-    position: absolute;
-    top: 135px;
-    left: 48.5%;
     animation-name: centerAnimation;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -656,25 +654,20 @@ li>a{
     width: 100%;
     height: auto;
     padding-top: 60px;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .event-center>.events-left-line,
 .event-center>.events-right-line{
     width: 43%;
     height: 1px;
     background-color: #B29B85;
-    position: absolute;
-}
-.event-center>.events-right-line{
-    right:0px;
 }
 .events-center{
     width: 35px;
     height: 35px;
     background-image: url(../img/Union.svg);
-    position: absolute;
-    top: 40px;
-    right: 550px;
 }
 #numbers{
     width: 100%;
