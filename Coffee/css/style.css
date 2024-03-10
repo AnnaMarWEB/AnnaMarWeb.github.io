@@ -756,14 +756,14 @@ li>a{
 .team-center{
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .center2{
     width: 35px;
     height: 35px;
     background-image: url(../img/Union2.svg);
-    position: absolute;
-    left: 630px;
-    top: 45px;
     animation-name: centerAnimation;
     animation-duration: 4s;
     animation-iteration-count: infinite;
