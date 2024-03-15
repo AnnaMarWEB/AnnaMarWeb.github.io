@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
     <header>
         <nav>
             <i class="fa-solid fa-bars"></i>
@@ -19,54 +22,98 @@
                 <li><a href="#Portfolio">Portfolio</a></li>
                 <li style="border: none;"><a href="#Contacts" >Contacts</a></li>
             </ul>
+            <button id="theme-btn">Dark</button>
         </nav>
     </header>
     <section id="Home">
-        <div class="home-shadow">
-            <div class="home-info" data-aos="zoom-in">
-                <h1>ANNA MARUTYAN</h1>
-                <p>Front End Developer</p>
-            </div>
+        <div class="home-info" data-aos="zoom-in">
+            <h1>ANNA MARUTYAN</h1>
+            <p>Front End Developer</p>
         </div>
+        <button id="up-button"><i class="fa-solid fa-arrow-up"></i></button>
     </section>
     <section id="About">
         <h1>ABOUT ME</h1>
-        <div class="about-img-back" data-aos="fade-right"></div>
-        <div class="about-img" data-aos="fade-right"></div>
+        <div class="about-img-box">
+            <div class="about-img-back" data-aos="fade-right"></div>
+            <div class="about-img" data-aos="fade-right"></div>
+        </div>
         <div class="about-info" data-aos="fade-left">
             <h1>Web Developer</h1>
             <strong>My name is Anna and i am a junior web developer. I enjoy creating well designed sites that invades memory.</strong>
             <p><span>Name:</span> Anna Marutyan</p>
             <p><span>Birthday:</span> 10 April 2001</p>
-           <p><span>Phone:</span> +374 95 01 06 92</p>
+            <p><span>Phone:</span> +374 95 01 06 92</p>
             <p><span>Email:</span> marutyan.anna.web@gmail.
                 com</p> 
-            <button type="button"><a href="./images/Anna_Marutyan_cv_En.pdf" download="Anna_Marutyan_CV_En" target="_blank">Download CV En</a></button>
-            <button type="button"><a href="./images/Anna_Marutyan_cv_Arm.pdf" download="Anna_Marutyan_CV_Arm" target="_blank">Download CV Arm</a></button>
+            <p><span>Experience:</span> 1+ Year</p>
+            <p><span>Freelance:</span> Available</p>
+            <button type="button"><a href="./images/Anna_Marutyan_CV_En .pdf" download="Anna_Marutyan_CV_En" target="_blank">Download CV En</a></button>
+            <button type="button"><a href="./images/Աննա_Մարության_CV_Հայ .pdf" download="Աննա_Մարության_CV_Հայ" target="_blank">Download CV Arm</a></button>
+        </div>
+        <div class="education-experience">
+            <div class="education-experience-shadow">
+                <h1>EDUCATION & EXPERICENCE</h1>
+                <div class="education">
+                    <h1>My education in Web programming</h1>
+                    <div class="education-box">
+                        <h1>Energy School</h1>
+                        <strong>15.10.2023-15.02.2024</strong>
+                        <p>JavaScript courses</p>
+                    </div>
+                    <div class="education-box">
+                        <h1>Energy School</h1>
+                        <strong>15.06.2023-15.10.2023</strong>
+                        <p>Web development for beginners</p>                    
+                    </div>
+                </div>
+                <div class="experience">
+                    <h1>Experience</h1>
+                    <div class="experience-box">
+                        <h1>Energy School</h1>
+                        <strong>20.01.2024-20.02.2024</strong>
+                        <p><span>Practice:</span><br>
+                        Working on a real project with specialists.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="Skills">
-        <h1>I am fluent in...</h1>
+        <img src="./images/Lovepik_com-400948777-25d-information-technology-computer-technology-elements.png" class="computer-img" alt="Computer">
+        <h1>Skills</h1>
         <div class="skill-box">
-            <div class="skills skill1" data-aos="zoom-in">
-                <h2>HTML</h2>
-                <img src="./images/icons8-html-48.png" alt="">
+            <div class="skill-progress">
+                <h1>HTML</h1>
+                <div class="progress-bar">
+                    <div class="progress html-progress"></div>
+                </div>
             </div>
-            <div class="skills skill2" data-aos="zoom-in">
-                <h2>CSS</h2>
-                <img src="./images/icons8-css-48.png" alt="">
+            <div class="skill-progress">
+                <h1>CSS</h1>
+                <div class="progress-bar">
+                    <div class="progress css-progress"></div>
+                </div>
             </div>
-            <div class="skills skill3" data-aos="zoom-in">
-                <h2>JS fundamental</h2>
-                <img src="./images/icons8-js-48.png" alt="">
+            <div class="skill-progress">
+                <h1>JavaScript</h1>
+                <div class="progress-bar">
+                    <div  class="progress javascript-progress"></div>
+                </div>
+            </div>
+            <div class="skill-progress">
+                <h1>Bootstrap</h1>
+                <div class="progress-bar">
+                    <div class="progress bootstrap-progress"></div>
+                </div>
             </div>
         </div>
         <div class="also-use-skliis-box" data-aos="zoom-in">     
             <h1>I also use...</h1>
             <div class="also-use-skills">Slick slider</div>
             <div class="also-use-skills">AOS</div>
-            <div class="also-use-skills">Bootstrap</div>
         </div>
+        <img src="./images/Lovepik_com-401373103-programmer-knocking-code-work-icon-free-vector-illustration-mate.png" class="programmer-img"  alt="Programmer">
     </section>
     <section id="Portfolio">
         <h1>Portfolio</h1>
@@ -87,7 +134,7 @@
     </section>
     <section id="Contacts">
         <div class="contacts-shadow">
-            <h1>Contacts</h1>
+            <h1>Conatacts</h1>
             <p>E-mail: marutyan.anna.web@gmail.
                 com</p>
             <strong>Tel: +374 95 01 06 92</strong>
