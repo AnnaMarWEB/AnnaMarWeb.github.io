@@ -3,20 +3,129 @@
     margin: 0;
     box-sizing: border-box;
 }
+.preloader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B5D1FF;
+    z-index: 15;
+}
+.loader{
+    width: 100px;
+    height: 100px;
+    border: 12px dotted #34D6BE;
+    border-top: 12px dotted #5E4CFF;
+    animation: spin 0.9s linear infinite;
+    border-radius: 50%;
+}
+body.dark .preloader{
+    background-color: #3E3D89;
+}
+body.dark .loader{
+    border: 12px dotted #B6ADFF;
+    border-top: 12px dotted #5E4CFF;
+}
+body.dark h1,
+body.dark p,
+body.dark strong,
+body.dark #About>h1,
+body.dark .also-use-skills,
+body.dark #Portfolio>h1,
+body.dark h2{
+    color: white;
+}
+body.dark .about-info>p{
+    color: #3E3D89;
+    font-weight: 500;
+}
+body.dark .about-info,
+body.dark .education-experience{
+    box-shadow: none;
+}
+body.dark #Skills,
+body.dark #About,
+body.dark #Portfolio{
+    background-color: #3E3D89;
+}
+body.dark .about-img-back{
+    background: linear-gradient(#3E3D89, #3E3D89) padding-box, 
+    linear-gradient(to right top, #B6ADFF, #5E4CFF) border-box;
+}
+body.dark .about-info button{
+    background: linear-gradient(to right, #5E4CFF, #a49af3);
+}
+body.dark nav,
+body.dark .home-info,
+body.dark .contacts-shadow,
+body.dark footer{
+    background-color: #3e3d89e7;
+    color: white;
+}
+body.dark a{
+    color: white;
+}
+body.dark li{
+    border-right: 2px solid white;
+}
+body.dark #theme-btn,
+body.dark .fa-bars{
+    color: white;
+}
+body.dark .about-img{
+    box-shadow: 3px 7px 9px #B6ADFF;
+}
+body.dark .progress-bar{
+    box-shadow: 2px 3px 1px rgb(182, 180, 180);
+}
+body.dark .progress{
+    background: linear-gradient(to left, #B6ADFF, #5E4CFF);
+}
+body.dark .portfolio img{
+    box-shadow: 2px 4px 5px #B6ADFF;
+}
+body.dark .about-info,
+body.dark .also-use-skliis-box,
+body.dark .education-experience{
+    background: linear-gradient(to right top, #B6ADFF, #5E4CFF);
+}
+body.dark .education{
+    border-right: 3px solid white;
+}
+body.dark .education-experience-shadow{
+    background: transparent;
+}
+body.dark #up-button{
+    color: white;
+    background-color: #5E4CFF;
+    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.514) inset;
+}
 nav{
     width: 100%;
     padding: 20px;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.575);
+    background-color: rgba(255, 255, 255, 0.863);
     z-index: 8;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .fa-bars{
-    color: white;
+    color: #5E4CFF;
     font-size: 20px;
     display: none;
+}
+#theme-btn{
+    border: none;
+    font-size: 28px;
+    color: #5E4CFF;
+    background: transparent;
+    cursor: pointer;
 }
 ul{
     list-style: none;
@@ -25,11 +134,11 @@ ul{
 }
 ul>li{
     padding: 0 50px;
-    border-right: 2px solid white;
+    border-right: 2px solid #5E4CFF;
 }
 li>a{
     text-decoration: none;
-    color: white;
+    color: #5E4CFF;
     font-size: 22px;
 }
 #Home{
@@ -39,31 +148,43 @@ li>a{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-}
-
-.home-shadow{
-    width: 100%;
-    height: 650px;
-    background-color: rgba(0, 0, 0, 0.199);
     padding: 200px 50px 100px 50px;
+    position: relative;
 }
-
 .home-info{
-    color: white ;
+    color: #5E4CFF;
     font-size: 30px;
     float: right;
     padding: 100px 40px;
-    background-color: rgba(0, 0, 0, 0.603);
+    background-color: rgba(255, 255, 255, 0.863);
+}
+#up-button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #5E4CFF;
+    border-radius: 50%;
+    font-size: 25px;
+    box-shadow: 0px 8px 16px 0px #5e4cffd3 inset;
+    cursor: pointer;
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    z-index: 12;
 }
 #About{
     width: 100%;
     height: auto;
-    padding: 100px 70px;
-    background-color: rgb(230, 228, 228);
+    padding: 70px;
+    background-color: #B5D1FF;
     color: black;
     text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;    
     position: relative;
 }
@@ -71,53 +192,62 @@ li>a{
     width: 100%;
     text-align: center;
     font-size: 60px;
-    color: #505475;
+    color: #5E4CFF;
+}
+.about-img-box{
+    width: 30%;
+    position: relative;
+    padding-top: 150px;
 }
 .about-img-back{
-    width: 30%;
+    width: 100%;
     height: 370px;
-    border: 20px solid #C2C5E1;
+    border: 20px solid transparent;
+    background: linear-gradient(#b4cbf3,#b4cbf3) padding-box,
+    linear-gradient(to right top , #34D6BE, #5E4CFF) border-box;
     border-radius: 50%;
-    margin-top: 70px;
 }
 .about-img{
-    width: 30%;
+    width: 100%;
     height: 370px;
     border-radius: 50%;
+    box-shadow: 3px 7px 9px #3E3D89;
     margin: auto;
     background-image: url(../images/5384517172790940280_120.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;    
     position: absolute;
-    left: 10%;
-    top: 29%;
+    top: 20%;
+    left: 15%;
 }
 .about-info{
     padding: 50px;
     width: 40%; 
     height: auto;
-    background-color: #C2C5E1;
+    background-color: white;
     margin-top: 50px;
+    border-radius: 30px;
+    box-shadow: 3px 9px 7px #3E3D89;
 }
 .about-info>strong{
     font-size:25px;
-    color: rgb(117, 114, 114);
+    color: rgb(87, 86, 86);
 }
 .about-info>h1{
     font-size: 40px;
     margin-bottom: 20px;
-    color: #505475;
+    color: #5E4CFF;
 }
 .about-info>p{
     font-size: 21px;
     line-height: 1.8;
-    color: #505475;
+    color: #5E4CFF;
 }
 .about-info button{
     padding: 10px 15px;
     border: none;
-    background-color: #505475;
+    background:linear-gradient(to left, #5E4CFF,#34D6BE);
     margin: 10px;
     border-radius: 20px;
 }
@@ -126,51 +256,126 @@ li>a{
     color: white;
     font-size: 18px;
 }
+.education-experience{
+    width: 85%;
+    height: auto;
+    padding: 50px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 30px;
+    background-color: #fff;
+    background-image: url(../images/study.png);
+    background-size: cover;
+    box-shadow: 3px 9px 7px #3E3D89;
+}
+.education-experience-shadow{
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #ffffffe8;
+    padding: 30px 50px;
+}
+.education-experience-shadow>h1{
+    width: 100%;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #5E4CFF;
+}
+.education>h1,
+.experience>h1{
+    font-size: 27px;
+    margin-bottom: 20px;
+    color: #5E4CFF;
+}
+.education-box,
+.experience-box{
+    margin-top: 30px;
+    color: #5E4CFF;
+}
+.education-box>strong,
+.education-box>p,
+.experience-box>strong,
+.experience-box>p{
+    color: rgb(87, 86, 86);
+    line-height: 1.4;
+    font-size: 20px;
+}
+.education,
+.experience{
+    width: 45%;
+    padding: 0 50px;
+}
+.education{
+    border-right: 3px solid #5E4CFF;
+}
 #Skills{
     width: 100%;
-    height: 950px;
-    background-color: #C2C5E1;
-    padding: 100px 50px;
-    color: #505475;
+    height: auto;
+    background-color: #B5D1FF;
+    padding: 80px 50px;
+    color: #5E4CFF;
+    position: relative;
 }
 #Skills>h1,
 .also-use-skliis-box>h1{
     font-size: 50px;
     text-align: center;
 }
+.computer-img{
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.programmer-img{
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
 .skill-box{
     width: 100%;
     height: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 70px 150px;
+}
+.skill-progress{
+    width: 45%;
+    margin-top: 20px;
+}
+.progress{
+    width: 0;
+    height: 10px;
+    background:linear-gradient(to left, #34D6BE, #5E4CFF);
+    border-radius: 10px;
     position: relative;
-    padding: 100px 0;
+    transition: all 1s;
 }
-.skills{
-    width: 19%;
-    border-radius: 50%;
-    text-align: center;
+.progress-bar{
+    width: 100%;
+    height: 10px;
     background-color: #fff;
-    padding:80px 0;
-    box-shadow: 2px 4px 5px grey;
-    position: absolute;
-    top: 28%;
-}
-.skill1{
-    left: 25%;
-}
-.skill2{
-    left: 40%;
-}
-.skill3{
-    left: 55%;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 5px 3px 2px 2px #a6a9c2;
 }
 .also-use-skliis-box{
     width: 50%;
     height: auto;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 30px;
     padding: 50px;
     text-align: center;
     background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 2px 4px 9px #3E3D89;
 }
 .also-use-skliis-box>h1{
     margin-bottom: 20px;
@@ -178,26 +383,19 @@ li>a{
 .also-use-skills{
     font-size: 30px;
 }
-#Skills a{
-    text-decoration: none;
-    color: #505475;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
+
 #Portfolio{
     width: 100%;
     height: auto;
-    background-color: rgb(230, 228, 228);
+    background-color: #B5D1FF;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 100px 70px;
+    padding: 70px 70px 100px 70px;
 }
 #Portfolio>h1{
     font-size: 50px;
-    color: #505475;
+    color: #5E4CFF;
 }
 .portfolio-box{
     padding: 70px 0;
@@ -209,35 +407,35 @@ li>a{
     width: 30%;
     height: 200px;
     text-align: center;
-    color: #505475;
+    color: #5E4CFF;
 }
 .portfolio img{
     width: 100%;
     height: 200px;
     margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 2px 4px 5px grey;
+    box-shadow: 2px 4px 5px #3E3D89;
 }
 #Contacts{
     width: 100%;
     height: auto;
     padding: 100px;
-    background-image: url(../images/high-angle-desk-assortment-with-laptop\ \(1\).jpg);
+    background-image: url(../images/monitor-1307227_1280.jpg);
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    color: white;
+    color: #5E4CFF;
     font-size: 40px;
 }
 .contacts-shadow{
     padding: 20px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.596);
+    background-color: rgba(255, 255, 255, 0.863);
     padding: 70px;
 }
 footer{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: #5E4CFF;
     padding: 20px;
     text-align: center;
     font-size: 30px;
@@ -248,22 +446,34 @@ footer{
 .show{
     display: block;
 }
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 @media only screen and (max-width:992px){
     nav{
-        display: block;
+        justify-content: space-between;
         padding: 25px 50px;
+        align-items: center;
+    }
+    #theme-btn{
+        font-size: 20px;
     }
     .fa-bars{
         display: block;
     }
     ul{
-        width: 30%;
+        width: 100%;
         display: block;
         position: absolute;
         top: 100%;
         left: 0;
         padding: 20px 50px;
-        background-color: rgba(0, 0, 0, 0.575);
+        background-color: white;
         display: none;
     }
     ul>li{
@@ -288,6 +498,11 @@ footer{
         font-size: 16px;
         padding: 50px 20px;
     }
+    #up-button{
+        width: 40px;
+        height: 40px;
+        right: 3%;
+    }
     #About{
         padding: 70px 20px;
         height: auto;
@@ -298,7 +513,9 @@ footer{
     .about-img-back{
         width: 200px;
         height: 200px;
-        border: 10px solid #C2C5E1;
+        border: 10px solid transparent;
+        background: linear-gradient(#b4cbf3,#b4cbf3) padding-box,
+        linear-gradient(to right top , #34D6BE, #5E4CFF) border-box;
     }
     .about-img{
         width: 200px;
@@ -322,9 +539,34 @@ footer{
     .about-info a{
         font-size: 16px;
     }
+    .education-experience-shadow>h1{
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+    .education,
+    .experience{
+        width: 100%;
+        padding: 30px 0;
+    }
+    .education{
+        border: none;
+        border-bottom: 3px solid #5E4CFF;
+    }
+    body.dark .education{
+        border: none;
+        border-bottom: 3px solid white;
+    }
     #Skills{
         height: 650px;
-        padding: 50px 30px;
+        padding: 50px;
+    }
+    .computer-img{
+        width: 200px;
+        height: 150px;
+    }
+    .programmer-img{
+        width: 180px;
+        height: 200px;
     }
     #Skills>h1{
         font-size: 40px;
@@ -333,9 +575,10 @@ footer{
         height: 250px;
         padding: 0;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
+   
     .skills{
         width: 150px;
         height: 150px;
@@ -347,7 +590,7 @@ footer{
         font-size: 18px;
     }
     .also-use-skliis-box{
-        width: 60%;
+        width: 80%;
         padding: 30px;
         margin-top: 20px;  
     }
@@ -361,7 +604,7 @@ footer{
         font-size: 22px;
     }
     #Portfolio{
-        padding: 50px 30px;
+        padding: 10px 30px 50px 30px;
     }
     #Portfolio>h1{
         font-size: 40px;
@@ -387,18 +630,23 @@ footer{
     nav{
         padding: 15px 20px;
         z-index: 9;
-        background-color: rgba(0, 0, 0, 0.685);
+        background-color:  rgba(255, 255, 255, 0.911);
     }
     ul{
         padding: 10px 20px;
-        background-color: rgba(0, 0, 0, 0.685);
-        width: 50%;
+        background-color: white;
+        width: 100%;
+    }
+    body.dark ul>li{
+        border-right:none;
+    }
+    body.dark ul{
+        background-color: #3e3d89e7;
     }
     li>a{
         font-size: 17px;
     }
-    #Home,
-    .home-shadow{
+    #Home{
         height: 280px;
         position: relative;
     }
@@ -409,17 +657,30 @@ footer{
         text-align: center;
         top: 75%;
         left: 20%;
-        background-color: #C2C5E1;
-        color: #505475;
+        background-color:  rgba(255, 255, 255, 0.911);
+        color: #5E4CFF;
     }
     .home-info>h1{
         font-size: 20px;
+    }
+    #up-button{
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        right: 2%;
     }
     #About{
         overflow: hidden;
         padding: 100px 20px 50px 20px;
         display: block;
         height: auto;
+    }
+    #About>h1{
+        font-size: 30px;
+    }
+    .about-img-box{
+        width: 100%;
+        padding-top: 30px;
     }
     .about-img-back{
         display: none;
@@ -428,18 +689,51 @@ footer{
         position: static;
         width: 150px;
         height: 150px;
-        margin-top: 30px;
     }
     .about-info{
         width: 90%;
         margin: auto;
         margin-top: 30px;
     }
+    .computer-img{
+        top: -5%;
+    }
     .about-info>p{
         font-size: 18px;
     }
+    .education-experience{
+        width: 90%;
+        margin-top: 50px;
+        padding: 20px;
+    }
+    .education-experience-shadow{
+        padding: 20px;
+        padding-bottom: 0px;
+    }
+    .education-experience-shadow>h1{
+        font-size: 20px;
+    }
+    .education>h1,
+    .experience>h1{
+        font-size: 18px;
+        padding: 0;
+    }
+    .education-box,
+    .experience-box{
+        margin-top: 10px;
+    }
+    .education-box>h1,
+    .experience-box>h1{
+        font-size: 20px;
+    }
+    .education-box>strong,
+    .experience-box>strong,
+    .education-box>p,
+    .experience-box>p{
+        font-size: 16px;
+    }
     #Skills{
-        padding: 50px;
+        padding: 100px 50px 0px 50px;
         height: auto;
     }
     #Skills>h1{
@@ -448,8 +742,23 @@ footer{
     .skill-box{
         height: 150px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+    }
+    .skill-box h1{
+        font-size: 20px;
+    }
+    .skill-progress{
+        width: 100%;
+    }
+    .progress-bar{
+        width: 100%;
+        height: 7px;
+        box-shadow: 2px 1px 1px 1px #a6a9c2;
+    }
+    .progress{
+        height: 7px;
     }
     .skills{
         width: 100px;
@@ -461,13 +770,20 @@ footer{
         font-size: 15px;
     }
     .also-use-skliis-box{
-        width: 90%;
+        width: 100%;
+        margin-top: 130px;
     }
     .also-use-skliis-box>h1{
         font-size: 30px;
     }
     .also-use-skills{
         font-size: 18px;
+    }
+    .programmer-img{
+        position: static;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
     }
     #Skills a{
         font-size: 18px;
@@ -489,8 +805,11 @@ footer{
     #Contacts{
         padding: 30px;
     }
+    .contacts-shadow{
+        padding: 30px;
+    }
     #Contacts{
-        font-size: 20px;
+        font-size: 18px;
     }
     footer{
         font-size: 18px;
