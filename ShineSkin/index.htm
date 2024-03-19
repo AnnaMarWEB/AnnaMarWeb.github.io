@@ -6,14 +6,15 @@
     <title>ShineSkin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+    
+    <script src="https://kit.fontawesome.com/d480194aa2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-     <div class="preloader">
+    <div class="preloader">
         <div class="loader"></div>
     </div>
-     <div class="scrollbar">
+    <div class="scrollbar">
         <div class="progress"></div>
     </div>
     <header id="Menu">
@@ -43,7 +44,7 @@
         <div class="about-img"></div>
         <div class="about-text">
             <h3>Shineskin</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati accusamus laudantium nesciunt illum, aliquam quis! Exercitationem qui nemo dolores sint, harum ea magni, animi molestiae perferendis, sunt asperiores nobis cum! Culpa voluptate rem placeat sed molestiae iusto natus porro autem doloribus eum ad expedita explicabo dolore optio et, a illo quisquam fuga ducimus ipsam aspernatur nobis cum beatae velit? Fugiat molestias repellendus corrupti nam odio accusamus, explicabo laudantium hic doloribus illum vitae doloremque velit ex, debitis aspernatur repellat itaque, distinctio porro consequatur. Molestiae rem molestias sint, porro libero, tempore sunt aut velit eum beatae, provident ipsam deleniti sed consectetur aliquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati accusamus laudantium nesciunt illum, aliquam quis! Exercitationem qui nemo dolores sint, harum ea magni, animi molestiae perferendis, sunt asperiores nobis cum! Culpa voluptate rem placeat sed molestiae iusto natus porro autem doloribus eum ad expedita explicabo dolore optio et, a illo quisquam fuga ducimus ipsam aspernatur nobis cum beatae velit? Fugiat molestias repellendus corrupti nam odio accusamus, explicabo laudantium hic doloribus illum vitae doloremque velit ex, debitis aspernatur repellat itaque, distinctio porro consequatur.</p>
         </div>
         <img src="./img/pngwing.com (1).png" alt="pic" id="about-stones">
     </section>
@@ -76,9 +77,10 @@
         </div>
     </section>
     <div class="products-text">
-    <h1>OUR PRODUCTS</h1>
-    
-    <button id="filter-open" onclick="menuOpen2()"></button>
+        <div class="products-text-top">
+            <button id="filter-open"></button>
+            <h1>OUR PRODUCTS</h1>
+        </div>   
     <div class="dropdown-select">
         <h1>Filter</h1>
         <select name="name" id="Pname">
@@ -198,7 +200,7 @@
         <div class="footer-logo"></div>
         <h1>SHINESKIN</h1>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./slick/slick.min.js"></script>
     <script src="js/main.js"></script>
     <script>
@@ -223,8 +225,6 @@
         slidesToScroll: 1
       }
     }
-  
-
     ]
     });
   });
