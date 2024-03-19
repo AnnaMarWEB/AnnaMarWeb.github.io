@@ -311,6 +311,7 @@ let dropdownSelect=document.querySelector(".dropdown-select")
 let productSearch=document.querySelector("#product-search");
 let searchButton=document.querySelector("#search-button");
 let filterButton=document.querySelector("#filter-button");
+let filterOpen=document.querySelector("#filter-open")
 let pName=document.querySelector("#Pname");
 let pBrand=document.querySelector("#Pbrand");
 let skinType=document.querySelector("#skin-type");
@@ -325,6 +326,8 @@ let questionContainer=document.createElement("div");
 let answerIndex=0;
 let buyMenu=document.createElement("div");
 let nextBtn=document.createElement("button");
+let menuLi=dropdown.querySelectorAll("li")
+
 
 
 
@@ -366,6 +369,7 @@ filterButton.addEventListener("click",function(item){
     })
     cleanproduct()
     filterAll.forEach(showProduct)
+    dropdownSelect.style.display="none"
 })
 let d=new Date();
 let workDay=d.getDay()
@@ -507,14 +511,18 @@ function menuOpen(){
         dropdown.style.display="none"
     }
 }
-function menuOpen2(){
+menuLi.forEach(function(item){
+    item.addEventListener("click",function(){
+        dropdown.style.display="none"
+    })
+})
+filterOpen.addEventListener("click",function(){
     if(dropdownSelect.style.display=="none"){
         dropdownSelect.style.display="block"
     }else{
         dropdownSelect.style.display="none"
     }
-}
-
+})
 function clearQuestion(){
     answer.innerHTML="";
     question.innerHTML=""
