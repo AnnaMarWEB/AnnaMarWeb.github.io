@@ -41,7 +41,13 @@ AOS.init({
     duration: 1200,
 });
 let faBars=document.querySelector(".fa-bars");
-let menu=document.querySelector(".menu")
+let menu=document.querySelector(".menu");
+let menuLi=menu.querySelectorAll("li");
+menuLi.forEach(function(item){
+    item.addEventListener("click",function(){
+        menu.classList.remove("show")
+    })
+})
 faBars.addEventListener("click",function(){
     menu.classList.toggle("show")
 })
