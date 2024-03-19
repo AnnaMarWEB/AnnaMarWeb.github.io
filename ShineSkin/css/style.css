@@ -150,7 +150,7 @@ nav{
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 50px 100px 100px 100px;
     position: relative;
@@ -174,16 +174,20 @@ nav{
     height: 600px;
     background-image: url(../img/toa-heftiba-GLl6_-L3fxM-unsplash.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     margin-top: 70px;
+    border-radius: 50px 0;
 }
 .about-text{
     width: 45%;
+    height: 600px;
+    background-color: #ffffffe5;
     margin-top: 70px;
-    padding: 100px 0;
+    padding: 70px 30px 50px 30px;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     color: #6D9D17;
+    border-radius: 0 50px;
 }
 .about-text p{
     padding: 20px 0;
@@ -191,16 +195,16 @@ nav{
 }
 
 #about-stones{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     position: absolute;
-    left: 7%;
-    bottom: 10%;
-    transform: rotate(-10deg);
+    right: 1%;
+    bottom: 6%;
+    transform: rotate(10deg);
 }
 .products-text{
     width: 100%;
-    height: 400px;
+    height: 350px;
     background-image: url(../img/depositphotos_195609052-stock-photo-natural-cosmetics-for-home-or.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -208,6 +212,13 @@ nav{
     padding: 150px 0 0 0 ;
     text-align: center;
     position: relative;
+}
+.products-text-top{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #filter-open{
     width: 50px;
@@ -219,9 +230,7 @@ nav{
     background-size: contain;
     background-position: center center;
     cursor: pointer;
-    position: absolute;
-    top: 165px;
-    left: 150px;
+    margin: 0 20px;
 }
 .dropdown-select{
     width: 80%;
@@ -274,21 +283,19 @@ nav{
     background-size: cover;
     padding: 20px 100px 100px 100px;
 }
-.products-text>h1{
-    width: 100%;
+.products-text-top>h1{
     font-size: 70px;
-    padding: 0 0 100px 0;
     color: #6D9D17;
 }
 .product-card{
     width: 28%;
     height: auto;
-    background-color: #ffffffb9;
+    background-color: #ffffffe8;
     padding: 20px;
     margin: 20px;
     text-align: center;
-    box-shadow: 1px 3px 5px #6D9D17;
-    border-radius: 20px;
+    box-shadow: 1px 3px 8px #6D9D17;
+    border-radius: 40px 0;
     cursor: pointer;
 }
 .btn{
@@ -379,12 +386,12 @@ nav{
     background-color: #fff;
 }
 .products-img{
-    width: 90%;
-    height: 300px;
+    width: 100%;
+    height: 270px;
     background-repeat: no-repeat;
     background-size: 100%;
+    border-radius: 30px 0;
     margin: auto;
-   
 }
 .product-card p{
     font-size: 20px;
@@ -647,15 +654,17 @@ footer>h1{
         height: 450px;
     }
     .about-text{
-        padding: 0;
-        height: 450px;
-        font-size: 16px;
+        width: 100%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.938);
+        padding: 15px;
+        margin-top: 20px;
+        font-size: 14px;
     }
     #about-stones{
         width: 100px;
         height: 100px;
         bottom: 7%;
-        left: 4%;
     }
     .carousel-container{
         height: 350px;
@@ -709,16 +718,17 @@ footer>h1{
     }
     .product-card{
         margin: 10px;
-        height: 350px;
+        height: 300px;
         padding: 20px 10px;
+        border-radius: 20px 0;
     }   
     .products-img{
-        height: 60%;
+        height: 55%;
+        border-radius: 10px 0;
         background-position: center center;
     }
     .product-card p{
         font-size: 13px;
-        margin: 5px;
     }
     .product-view{
         padding: 50px;
@@ -816,9 +826,16 @@ footer>h1{
     nav{
         padding: 10px 20px;
     }
+    .logo strong{
+        color: #6D9D17;
+    }
+    .fixed-img{
+        background-image: url(../img/headerImg.jpg);
+    }
     #button{
         width: 35px;
         height: 35px;
+        border: 1px solid #6D9D17;
     }
     .logo strong{
         font-size: 20px;
@@ -834,7 +851,7 @@ footer>h1{
     }
     #Menu h1{
         font-size: 30px;
-        width: 75%;
+        width: 55%;
         color: #6D9D17;
     }
     header img{
@@ -843,7 +860,7 @@ footer>h1{
         width: 50%;
     }
     #about-leaves{
-        top: 38%;
+        top: 60%;
         height: 150px;
         width: 50%;
     }
@@ -852,6 +869,7 @@ footer>h1{
     }
     #About h1{
         font-size: 30px;
+        color: #6D9D17;
     }
     .about-img{
         width: 100%;
@@ -862,13 +880,12 @@ footer>h1{
     }
     .about-text{
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.664);
+        background-color: rgba(255, 255, 255, 0.938);
         padding: 15px;
         margin-top: 20px;
         font-size: 14px;
     }
     #about-stones{
-
         width: 70px;
         height: 70px;
     }
@@ -883,11 +900,11 @@ footer>h1{
     }
     .product-card{
         width: 40%;
-        height: 320px;
+        height: 300px;
         padding: 10px 10px 20px 10px;
     }
     .btn{
-        font-size: 16px;
+        font-size: 12px;
     }
     .product-view{
         padding: 30px;
@@ -901,6 +918,7 @@ footer>h1{
     }
     .products-img{
         width: 100%;
+        background-size: cover;
     }
     .product-card p{
         margin: 5px;
@@ -941,13 +959,13 @@ footer>h1{
         padding-top: 50px;
         height: 100px;
     }
-    .products-text>h1{
-        font-size: 30px;
-        padding-bottom: 50px;
+    .products-text-top>h1{
+        font-size: 25px;
     }
     #filter-open{
         width: 25px;
         height: 25px;
+        margin: 0 10px;
     }
     .dropdown-select{
         padding: 20px;
