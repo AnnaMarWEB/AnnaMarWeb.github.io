@@ -729,6 +729,7 @@ footer>h1{
     }
     .product-card p{
         font-size: 13px;
+        margin: 0px;
     }
     .product-view{
         padding: 50px;
@@ -922,6 +923,7 @@ footer>h1{
         background-size: cover;
     }
     .product-card p{
+        margin: 5px;
         font-size: 11px;
     }
     .minus-mark,
